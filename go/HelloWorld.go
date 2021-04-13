@@ -1,9 +1,9 @@
 /*
-First go program from The go programming language page:1
+First go program from The go programming language book page:1
 Program: Hello World
 Description: To print hello world on console
-
 */
+
 package main
 
 import "fmt"
