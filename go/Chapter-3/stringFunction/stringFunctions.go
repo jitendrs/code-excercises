@@ -6,25 +6,28 @@ Description: code to check if string has prefix/suffix or provided substrings.
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
-	// if HasPrefix(os.Args[1], os.Args[2]) {
-	// 	fmt.Printf("Prifix %s is in the string: %s\n", os.Args[1], os.Args[2])
-	// } else {
-	// 	fmt.Printf("Prifix %s is not the string: %s\n", os.Args[1], os.Args[2])
-	// }
+	if HasPrefix(os.Args[1], os.Args[2]) {
+		fmt.Printf("Prifix %s is in the string: %s\n", os.Args[1], os.Args[2])
+	} else {
+		fmt.Printf("Prifix %s is not the string: %s\n", os.Args[1], os.Args[2])
+	}
 
-	// if HasSuffix(os.Args[1], os.Args[2]) {
-	// 	fmt.Printf("Sufix %s is in the string: %s\n", os.Args[2], os.Args[1])
-	// } else {
-	// 	fmt.Printf("Sufix %s is not the string: %s\n", os.Args[2], os.Args[1])
-	// }
-	// if Contains(os.Args[1], os.Args[2]) {
-	// 	fmt.Printf("string  %s is substring of : %s\n", os.Args[2], os.Args[1])
-	// } else {
-	// 	fmt.Printf("string  %s is not substring: %s\n", os.Args[2], os.Args[1])
-	// }
+	if HasSuffix(os.Args[1], os.Args[2]) {
+		fmt.Printf("Sufix %s is in the string: %s\n", os.Args[2], os.Args[1])
+	} else {
+		fmt.Printf("Sufix %s is not the string: %s\n", os.Args[2], os.Args[1])
+	}
+	if Contains(os.Args[1], os.Args[2]) {
+		fmt.Printf("string  %s is substring of : %s\n", os.Args[2], os.Args[1])
+	} else {
+		fmt.Printf("string  %s is not substring: %s\n", os.Args[2], os.Args[1])
+	}
 	fmt.Println(Index("adwdcddabcwew", "abc"))
 }
 
